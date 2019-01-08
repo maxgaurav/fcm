@@ -21,7 +21,7 @@ class FcmMessage
     /**
      * @var array
      */
-    protected $registrationIds;
+    protected $registrationIds = [];
 
     /**
      * @var string
