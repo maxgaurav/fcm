@@ -382,6 +382,12 @@ class FcmMessage
             $array['notification'] = $this->notification->toArray();
         }
 
+        if (count($array['registration_ids']) <= 1) {
+            unset($array['registration_ids']);
+        } else {
+            unset($array['to']);
+        }
+
         return $array;
     }
 }
